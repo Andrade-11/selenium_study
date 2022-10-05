@@ -1,14 +1,15 @@
-package pages;
+package saucedemo.pages;
 
 
 import org.openqa.selenium.By;
-import static driver.DriverFactory.getDriver;
-import java.util.concurrent.TimeUnit;
+import static saucedemo.driver.DriverFactory.getDriver;
+
 public class LoginPage {
     By username = By.id("user-name");
     By passaword = By.id("password");
     By login_button = By.id("login-button");
-    By word_invertory = By.className("Products");
+    By word_invertory = By.className("title");
+
 
     public void goToSauceDemo(){
         getDriver().get("https://www.saucedemo.com/");
@@ -20,5 +21,8 @@ public class LoginPage {
         getDriver().findElement(passaword).sendKeys(pass);
         getDriver().findElement(login_button).click();
         Thread.sleep(3000);
+    }
+    public String searchWordInInventory(){
+       return getDriver().findElement(word_invertory).getText();
     }
 }
