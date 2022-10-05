@@ -10,7 +10,7 @@ import static driver.DriverFactory.getDriver;
 public class LoginTest extends BaseTest {
 
     @Test
-    public void sucessfullLogin() {
+    public void sucessfullLogin() throws InterruptedException{
         LoginPage loginPage = new LoginPage();
         loginPage.login("standard_user", "secret_sauce");
         Assert.assertEquals(getDriver().getTitle(), "Swag Labs");
