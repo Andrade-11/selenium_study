@@ -12,13 +12,13 @@ public class LoginPage {
 
     public void goToSauceDemo(){
         getDriver().get("https://www.saucedemo.com/");
-        getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 
-    public void login(String user,String pass)  {
+    public void login(String user,String pass) throws InterruptedException {
         goToSauceDemo();
         getDriver().findElement(username).sendKeys(user);
         getDriver().findElement(passaword).sendKeys(pass);
         getDriver().findElement(login_button).click();
+        Thread.sleep(3000);
     }
 }
