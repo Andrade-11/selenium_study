@@ -1,11 +1,10 @@
+package saucedemo.test;
 
 import org.junit.Assert;
 import org.junit.Test;
-import pages.LoginPage;
-import setup.BaseTest;
+import saucedemo.pages.LoginPage;
 
 
-import static driver.DriverFactory.getDriver;
 
 public class LoginTest extends BaseTest {
 
@@ -13,6 +12,6 @@ public class LoginTest extends BaseTest {
     public void sucessfullLogin() throws InterruptedException{
         LoginPage loginPage = new LoginPage();
         loginPage.login("standard_user", "secret_sauce");
-        Assert.assertEquals(getDriver().getTitle(), "Swag Labs");
+        Assert.assertEquals(loginPage.searchWordInInventory(), "PRODUCTS");
     }
 }

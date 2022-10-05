@@ -1,6 +1,5 @@
-package setup;
+package saucedemo.test;
 
-import driver.DriverFactory;
 import org.apache.commons.io.FileUtils;
 import org.junit.After;
 import org.junit.Before;
@@ -8,11 +7,12 @@ import org.junit.Rule;
 import org.junit.rules.TestName;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import saucedemo.driver.DriverFactory;
 
 import java.io.File;
 import java.io.IOException;
 
-import static driver.DriverFactory.getDriver;
+import static saucedemo.driver.DriverFactory.getDriver;
 
 public class BaseTest {
     @Before
