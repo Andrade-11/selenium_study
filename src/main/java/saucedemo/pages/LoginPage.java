@@ -9,6 +9,7 @@ public class LoginPage {
     By passaword = By.id("password");
     By login_button = By.id("login-button");
     By word_invertory = By.className("title");
+    By error_message = By.xpath("//*[@id=\"login_button_container\"]/div/form/div[3]");
 
 
     public void goToSauceDemo(){
@@ -20,9 +21,12 @@ public class LoginPage {
         getDriver().findElement(username).sendKeys(user);
         getDriver().findElement(passaword).sendKeys(pass);
         getDriver().findElement(login_button).click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
     }
     public String searchWordInInventory(){
        return getDriver().findElement(word_invertory).getText();
+    }
+    public String searchMensageErrorLogin(){
+        return getDriver().findElement(error_message).getText();
     }
 }
