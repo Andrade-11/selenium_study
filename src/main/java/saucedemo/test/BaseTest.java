@@ -17,7 +17,7 @@ import static saucedemo.driver.DriverFactory.getDriver;
 public class BaseTest {
     @Before
     public void setup(){
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\Master\\Documents\\chromedriver_win32\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","C:\\Users\\Master\\Documents\\drivers\\chromedriver_win32\\chromedriver.exe");
     }
     @Rule
     public TestName testName = new TestName();
