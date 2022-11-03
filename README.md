@@ -3,9 +3,9 @@ Selenium Study
 
 Hello Everyone, this repository was one purpose improve my skills using Selenium WebDriver. After years of practicing Java with Selenium I almost masterized this framework.
 
+Drivers
+I setup drivers(Chrome,Firefox) with environment variables in Path. But, in this project have dependecy WebDriverManager, in BaseTest using annotation Before you can setup drivers using this dependecy.
 
-
-Dependencies
 
 First of all, need download a JDK to compile this project: https://www.oracle.com/java/technologies/downloads/
 
