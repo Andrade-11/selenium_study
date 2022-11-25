@@ -18,6 +18,10 @@ public class LoginPage extends BasePage{
         reusable.clickInButton(login_button);
         reusable.sleepBrowser();
     }
+    public void clickOnLoginButton() throws InterruptedException {
+        reusable.clickInButton(login_button);
+        reusable.sleepBrowser();
+    }
     public String searchWordInInventory(){
        return getDriver().findElement(word_invertory).getText();
     }

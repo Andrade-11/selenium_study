@@ -2,7 +2,6 @@ package saucedemo.test;
 
 import org.apache.commons.io.FileUtils;
 import org.junit.After;
-import org.junit.Before;
 import org.junit.Rule;
 import org.junit.rules.TestName;
 import org.openqa.selenium.OutputType;
@@ -15,10 +14,6 @@ import java.io.IOException;
 import static saucedemo.driver.DriverFactory.getDriver;
 
 public class BaseTest {
-    @Before
-    public void setup(){
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\Master\\Documents\\drivers\\chromedriver_win32\\chromedriver.exe");
-    }
     @Rule
     public TestName testName = new TestName();
 
