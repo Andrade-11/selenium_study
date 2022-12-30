@@ -4,10 +4,17 @@ import org.openqa.selenium.WebDriver;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 
-public class DriverFactory {
+public final class DriverFactory {
     private static WebDriver driver;
+
+    public DriverFactory(){
+        throw new UnsupportedOperationException("This is one Utility Class can't be instantiate");
+    }
 
     public static WebDriver getDriver(){
         if (driver == null){
@@ -23,5 +30,8 @@ public class DriverFactory {
             driver.quit();
             driver = null;
         }
+    }
+    public static WebDriverWait getDefaultWait(){
+        return new WebDriverWait(driver, Duration.ofSeconds(5));
     }
 }

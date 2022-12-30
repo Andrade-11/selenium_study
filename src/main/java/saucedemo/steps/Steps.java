@@ -8,34 +8,30 @@ import org.junit.Assert;
 import saucedemo.pages.LoginPage;
 import saucedemo.pages.Reusable;
 
-public class Login {
+public class Steps {
     private Reusable app;
     private LoginPage user;
 
-    public Login(){
+    public Steps(){
         app = new Reusable();
         user = new LoginPage();
     }
-    @Dado("que o usuário esta na pagina https:\\/\\/www.saucedemo.com\\/")
-    public void goToSauceDemo() {
-        app.goToSauceDemo();
-    }
+    @Dado("que o usuario acessa o saucedemo")
+    public void queOUsuarioAcessaOSaucedemo() {app.goToSauceDemo();}
 
     @Quando("inserir suas credencias")
     public void inputCredencial() throws InterruptedException {
-        user.login("standard_user", "secret_sauce");
+        user.loginCucumber("standard_user", "secret_sauce");
     }
 
-    @E("clicar no botão de: login")
-    public void clicarNoBotãoDeLogin() throws InterruptedException {
+    @E("clicar no botao de: login")
+    public void clicarNoBotaoDeLogin() throws InterruptedException {
         user.clickOnLoginButton();
     }
 
-    @Então("ele será direcionado para o inventário")
+    @Então("ele sera direcionado para o inventario")
     public void goToInventory() {
-        Assert.assertEquals(user.searchMensageErrorLogin(),"Epic sadface: Username and password do not match any user in this service");
+        Assert.assertEquals(user.searchWordInInventory(),"PRODUCTS");
     }
-
-
 
 }

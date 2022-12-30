@@ -1,7 +1,7 @@
 #language:pt
-  Funcionalidade: Realizar Login na aplicação SauceDemo
+  Funcionalidade: Realizar Login na aplicacao SauceDemo
     Cenario: Realizar login com sucesso
-      Dado que o usuário esta na pagina https://www.saucedemo.com/
+      Dado que o usuario acessa o saucedemo
       Quando inserir suas credencias
-      E clicar no botão de: login
-      Então ele será direcionado para o inventário
+      E clicar no botao de: login
+      Então ele sera direcionado para o inventario

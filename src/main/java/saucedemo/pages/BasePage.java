@@ -1,6 +1,6 @@
 package saucedemo.pages;
 
-public class BasePage {
+public abstract class BasePage {
     protected Reusable reusable;
 
     public BasePage(){

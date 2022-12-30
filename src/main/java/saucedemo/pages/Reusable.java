@@ -20,7 +20,5 @@ public class Reusable {
         Select select = new Select(getDriver().findElement(by));
         select.selectByVisibleText(option);
     }
-    public void sleepBrowser() throws InterruptedException {
-        Thread.sleep(2000);
-    }
+
 }
