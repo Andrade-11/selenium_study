@@ -10,8 +10,8 @@ public class Reusable {
         getDriver().get("https://www.saucedemo.com/");
     }
 
-    public void writeTextField(By by,String texto){
-        getDriver().findElement(by).sendKeys(texto);
+    public void writeTextField(By by,String text){
+        getDriver().findElement(by).sendKeys(text);
     }
     public void clickInButton(By by){
         getDriver().findElement(by).click();
@@ -20,7 +20,5 @@ public class Reusable {
         Select select = new Select(getDriver().findElement(by));
         select.selectByVisibleText(option);
     }
-    public void sleepBrowser() throws InterruptedException {
-        Thread.sleep(1000);
-    }
+
 }

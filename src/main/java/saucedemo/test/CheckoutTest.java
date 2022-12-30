@@ -1,7 +1,6 @@
 package saucedemo.test;
 
-import com.beust.ah.A;
-import jdk.vm.ci.aarch64.AArch64;
+
 import org.junit.Assert;
 import org.junit.Test;
 import saucedemo.pages.CheckoutPage;
