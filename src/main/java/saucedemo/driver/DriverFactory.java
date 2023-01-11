@@ -1,5 +1,6 @@
 package saucedemo.driver;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -18,6 +19,7 @@ public final class DriverFactory {
 
     public static WebDriver getDriver(){
         if (driver == null){
+            WebDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
             options.addArguments("start-maximized");
             options.addArguments("--incognito");
