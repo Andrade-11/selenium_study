@@ -1,12 +1,13 @@
 package saucedemo.database.interfaces;
 
 
-public interface GetCredencial extends MongoOps {
+public interface GetCredencial extends MongoOps{
+   //MongoOps ops = new MongoOps();
    default String getUsernameValue(int value){
-      return getCollection().get(value).get("username").toString();
+      return getCollectionAutomation().get(value).get("user").toString();
    }
    default String getPasswordValue(int value){
-      return getCollection().get(value).get("password").toString();
+      return getCollectionAutomation().get(value).get("password").toString();
    }
 
 }

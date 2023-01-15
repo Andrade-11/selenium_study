@@ -13,7 +13,7 @@ import java.io.IOException;
 
 import static saucedemo.driver.DriverFactory.getDriver;
 
-public class BaseTest {
+public class BaseTest{
     @Rule
     public TestName testName = new TestName();
 
