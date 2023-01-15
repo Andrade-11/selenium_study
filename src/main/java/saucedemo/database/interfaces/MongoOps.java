@@ -8,9 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public interface MongoOps {
-    MongoConnection mongoConnection = new MongoConnection();
-    default List<Document> getCollection(){
-        MongoCollection<Document> collection = mongoConnection.database.getCollection("automation");
-        return collection.find().into(new ArrayList<>());
-    };
+    MongoConnection mongo = new MongoConnection();
+     public default List<Document> getCollectionAutomation(){
+        MongoCollection<Document> collection = mongo.mongoDatabase.getCollection("automation");
+        return collection.find().into(new ArrayList<Document>());
+    }
 }
