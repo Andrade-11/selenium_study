@@ -19,7 +19,7 @@ public final class DriverFactory {
 
     public static WebDriver getDriver(){
         if (driver == null){
-            WebDriverManager.chromedriver().setup();
+            //WebDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
             options.addArguments("start-maximized");
             options.addArguments("--incognito");

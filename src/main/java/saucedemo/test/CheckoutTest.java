@@ -17,7 +17,7 @@ public class CheckoutTest extends BaseTest {
                 inventory = new InventoryPage();
         }
         @Test
-        public void sucessfullOrder() throws InterruptedException {
+        public void sucessfullOrder() {
                 loginPage.login("standard_user","secret_sauce");
                 inventory.getItemInTheCart();
                 checkout.submitForm("Gabriel Augusto","Dias de Andrade","2312321321");
