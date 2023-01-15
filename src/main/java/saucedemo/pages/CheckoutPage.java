@@ -20,8 +20,8 @@ public class CheckoutPage extends BasePage {
         reusable.clickInButton(continueButton);
         reusable.clickInButton(finish );
     }
-
     public String searchThankYouOrder(){
         return getDriver().findElement(thank_you).getText();
     }
+
 }
