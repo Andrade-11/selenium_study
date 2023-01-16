@@ -7,15 +7,29 @@ import org.junit.rules.TestName;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import saucedemo.driver.DriverFactory;
+import saucedemo.pages.CheckoutPage;
+import saucedemo.pages.InventoryPage;
+import saucedemo.pages.LoginPage;
+import saucedemo.pages.OptionsPage;
 
 import java.io.File;
 import java.io.IOException;
 
 import static saucedemo.driver.DriverFactory.getDriver;
 
-public class BaseTest{
+public abstract class BaseTest{
+    protected LoginPage user;
+    protected CheckoutPage checkout;
+    protected InventoryPage inventory;
+    protected OptionsPage options;
     @Rule
     public TestName testName = new TestName();
+    public BaseTest(){
+        this.user = new LoginPage();
+        this.checkout = new CheckoutPage();
+        this.inventory = new InventoryPage();
+        this.options = new OptionsPage();
+    }
 
     @After
     public void quit() throws IOException {
