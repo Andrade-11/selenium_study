@@ -6,7 +6,9 @@ import org.junit.runners.Suite;
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
         LoginTest.class,
-        CheckoutTest.class
+        CheckoutTest.class,
+        InventoryTest.class
+
 })
 public class SuiteCase {
 }
