@@ -19,7 +19,6 @@ public class OptionsPage extends BasePage{
         reusable.clickInButton(options);
         reusable.clickInButton(logout);
     }
-
     public String getTextSuperTitle(){
         return getDriver().findElement(superTitle).getText();
     }

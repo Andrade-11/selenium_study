@@ -23,14 +23,18 @@ public class Reusable {
         Select select = new Select(getDriver().findElement(by));
         select.selectByVisibleText(option);
     }
-    public void listOfElementProducts(){
+    public String listOfElementProducts(){
         List<WebElement> listOfElements = getDriver().findElements(By.id("inventory_container"));
+        List<WebElement> listOFTitles = getDriver().findElements(By.className("inventory_item_name"));
+        String getFirstProduct = listOFTitles.get(0).getText();
         for (WebElement list: listOfElements){
-            List<WebElement> listOFTitles = getDriver().findElements(By.className("inventory_item_name"));
             for (WebElement titleOfProducts: listOFTitles){
-                System.out.println(titleOfProducts.getText());
+                    if (getFirstProduct.contains("Sauce Labs Backpack")){
+                        break;
+                    }
             }
         }
+        return getFirstProduct;
     }
 
 }
