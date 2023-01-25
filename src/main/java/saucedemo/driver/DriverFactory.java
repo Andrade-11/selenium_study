@@ -34,6 +34,6 @@ public final class DriverFactory {
         }
     }
     public static WebDriverWait getDefaultWait(){
-        return new WebDriverWait(driver, Duration.ofSeconds(5));
+        return new WebDriverWait(driver, Duration.ofSeconds(3));
     }
 }

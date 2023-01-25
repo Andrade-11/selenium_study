@@ -7,7 +7,8 @@ import org.junit.runners.Suite;
 @Suite.SuiteClasses({
         LoginTest.class,
         CheckoutTest.class,
-        InventoryTest.class
+        InventoryTest.class,
+        OptionsTest.class
 
 })
 public class SuiteCase {
