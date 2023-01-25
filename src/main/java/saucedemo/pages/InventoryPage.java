@@ -1,6 +1,10 @@
 package saucedemo.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static saucedemo.driver.DriverFactory.getDriver;
 
@@ -30,5 +34,16 @@ public class InventoryPage extends BasePage{
 
     public String getTitle(){
         return getDriver().findElement(title).getText();
+    }
+
+    public ArrayList<WebElement> listOfElementProducts(){
+        List<WebElement> listOFTitles = getDriver().findElements(By.className("inventory_item_name"));
+        return new ArrayList<>(listOFTitles);
+    }
+    public void printarArrayList(){
+        System.out.print(listOfElementProducts().get(4).getText());
+    }
+    public String getTextAboutListOfProducts(){
+        return listOfElementProducts().get(0).getText();
     }
 }
