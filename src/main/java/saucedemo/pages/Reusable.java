@@ -12,7 +12,7 @@ import static saucedemo.driver.DriverFactory.getDriver;
 public class Reusable {
 
     public void goToSauceDemo(){
-        getDriver().get("https://www.saucedemo.com/");
+        getDriver().get("https://www.saucedemo.com/v1/");
     }
 
     public void writeTextField(By by,String text){

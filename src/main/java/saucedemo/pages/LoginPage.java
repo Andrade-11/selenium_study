@@ -13,7 +13,7 @@ public class LoginPage extends BasePage{
     By username = By.id("user-name");
     By passaword = By.id("password");
     By login_button = By.id("login-button");
-    By word_invertory = By.className("title");
+    By word_invertory = By.className("product_label");
     By error_message = By.xpath("//*[@id=\"login_button_container\"]/div/form/div[3]/h3");
 
     //This methods used in Junit Test

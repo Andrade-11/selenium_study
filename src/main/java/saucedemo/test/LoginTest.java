@@ -11,7 +11,7 @@ public class LoginTest extends BaseTest implements GetCredencial {
     @Test
     public void sucessfullLogin(){
         user.login(getUsernameValue(0), getPasswordValue(0));
-        Assert.assertEquals(user.searchWordInInventory(), "PRODUCTS");
+        Assert.assertEquals(user.searchWordInInventory(), "Products");
     }
     @Test
     public void messageErrorLogin() {
